@@ -5,7 +5,7 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ master ]
   schedule:
-    - cron: '44 12 * * *'
+    - cron: '55 12 * * *'
 
 jobs:
   checkov-job:
@@ -20,9 +20,6 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: terraform/
-          quiet: true # optional: display only failed checks
-          soft_fail: true # optional: do not return an error code if there are failed checks
           framework: terraform
           output_format: json
           download_external_modules: true 
-          log_level: DEBUG
