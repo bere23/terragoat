@@ -21,5 +21,6 @@ jobs:
         with:
           directory: terraform/
           framework: terraform
+          soft_fail: true
           output_format: json
           download_external_modules: true 
